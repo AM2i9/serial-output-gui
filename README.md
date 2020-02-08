@@ -7,7 +7,7 @@
   
   ## **Setup** ##
   
-  The setup of the GUI is incredibly simple. The downloaded zip file from the releases page contains an exe file named main.exe, and a      json file named config.json. The first thing you want to do, is open conifg.json. This can be done with a program like Notepad++,       Visual Studio or Visual Studio Code, or any other text editor that can open json files.
+  The setup of the GUI is incredibly simple. The downloaded zip file from the [releases](https://github.com/AwesomeMiner291/serial-output-gui/releases) page contains an exe file named main.exe, and a      json file named config.json. The first thing you want to do, is open conifg.json. This can be done with a program like Notepad++,       Visual Studio or Visual Studio Code, or any other text editor that can open json files.
   
   Inside, you should see somthing that looks like this:
   
