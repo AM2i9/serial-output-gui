@@ -40,4 +40,16 @@
  Once you have configured your buttons in config.json, which, by the way can be reconfigured at any time, you will want to open the second file in the download named main.exe. If windows says the program looks sketchy, and says you shouldn't run it, you can click on more info and run it anyway. I know this sounds sketchy, but I promise I'm not trying to steal your stuff.
  
  Next, you will see a gui similar to this:
+ ![Start GUI](https://cdn.discordapp.com/attachments/675532248493326359/675532279375986709/unknown.png)
  
+ As instructed by the GUI, you should enter the name of the serial port you are using to connect to your serial device. If you are using an Arduino, this can usually be found in the bottom right corner while connected to you board.
+ 
+ Next, enter the baud rate. This varies from programs, as you usually have to set it when you open your serial device's ports. Enter what you have set it as here.
+ 
+ Then, click refresh. When you click refresh, it will not only close and reopen the connection with your device, but it will also read through your config.json file and apply any changes you might have made.
+
+When you hit refresh, as long as you have correct JSON format in the config, your buttons should appear as such:
+
+![Refreshed GUI](https://cdn.discordapp.com/attachments/675532248493326359/675533781561770033/unknown.png)
+
+Upon pressing these buttons, the command which you specified in config.json will be sent to your serial device.
