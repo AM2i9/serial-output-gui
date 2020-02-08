@@ -14,7 +14,7 @@ class guibtn:
 
 
         btn = Button(master, text=txt , bg='#0052cc', fg='#ffffff',command=lambda: App.sendSerial(App, cmd))
-        btn['font'] = font.Font(size=60)
+        btn['font'] = font.Font(size=30)
 
         btn.pack(side="top")
 
@@ -25,18 +25,20 @@ class App:
         self.config = open('config.json')
         global port
         global bau
-        port = Entry(master)
-        portlabel = Label(master, text="Serial Port:")
-        baulabel = Label(master, text="Baudrate:")
-        bau =  Entry(master)
-        refresh = Button(master, text="Refresh", command=lambda: self.refresh())
-        portlabel.pack(side="top")
-        port.pack(side="top")
-        baulabel.pack(side="top")
-        bau.pack(side="top")
-        refresh.pack(side="top")
+        configFrame = Frame(master)
+        configFrame.pack(side='top')
+        port = Entry(configFrame)
+        portlabel = Label(configFrame, text="Serial Port:")
+        baulabel = Label(configFrame, text="Baudrate:")
+        bau =  Entry(configFrame)
+        refresh = Button(configFrame, text="Refresh", command=lambda: self.refresh())
+        portlabel.pack(side="left")
+        port.pack(side="left")
+        baulabel.pack(side="left")
+        bau.pack(side="left")
+        refresh.pack(side="left")
         
-        
+ 
     #Refreshes the GUI
     def refresh(self):
         global serport
@@ -55,5 +57,6 @@ class App:
 
 root = Tk()
 root.title("Serial Output")
+root.minsize(500, 100)
 application = App(root)
 root.mainloop()
